@@ -39,7 +39,7 @@
         android:text="@string/login_button_label" />
 
     <TextView
-        android:id="@+id/signUpText"
+        android:id="@+id/signupTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
