@@ -23,4 +23,7 @@
     <string name="menu_logout_label">Logout</string>
     <string name="empty_inbox_label">No New Messages</string>
     <string name="empty_friends_label">Add Friends to Play</string>
+    <string name="menu_edit_friends_label">Edit Friends</string>
+    <string name="title_activity_edit_friends">Edit Friends</string>
+
 </resources>
