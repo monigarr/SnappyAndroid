@@ -1,7 +1,7 @@
 SnappyAndroid
 =============
 
-Demo of Android snap fish clone project to show my Android development skills. 
+Demo of Android snap chat clone project to show my Android development skills. 
 
 Status
 =======
