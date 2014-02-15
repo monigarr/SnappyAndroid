@@ -21,4 +21,6 @@
     <string name="login_error_message">Username and Password Required.</string>
     <string name="login_error_title">Oops!</string>
     <string name="menu_logout_label">Logout</string>
+    <string name="empty_inbox_label">No New Messages</string>
+    <string name="empty_friends_label">Add Friends to Play</string>
 </resources>
