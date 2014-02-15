@@ -1,10 +1,13 @@
 package com.monigarr.snappyandroid;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
+
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 public class EditFriendsActivity extends Activity {
 
@@ -14,6 +17,14 @@ public class EditFriendsActivity extends Activity {
 		setContentView(R.layout.activity_edit_friends);
 		// Show the Up button in the action bar.
 		setupActionBar();
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		ParseQuery<ParseUser> query = ParseUser.getQuery();
+		query.orderByAscending(ParseConstants.KEY_USERNAME);
+		query.setLimit(1000);
 	}
 
 	/**
