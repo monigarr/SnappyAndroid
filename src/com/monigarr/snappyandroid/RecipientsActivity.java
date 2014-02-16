@@ -9,6 +9,7 @@ import android.support.v4.app.NavUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -25,13 +26,14 @@ public class RecipientsActivity extends ListActivity {
 	protected List<ParseUser> mFriends;
 	protected ParseRelation<ParseUser> mFriendsRelation;
 	protected ParseUser mCurrentUser;
+	protected MenuItem mSendMenuItem;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
 		setContentView(R.layout.activity_recipients);
-		// Show the Up button in the action bar.
+		// Show Up button in the action bar.
 		setupActionBar();
 		
 		getListView().setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
@@ -94,6 +96,7 @@ public class RecipientsActivity extends ListActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.recipients, menu);
+		mSendMenuItem = menu.getItem(0);
 		return true;
 	}
 
@@ -110,8 +113,19 @@ public class RecipientsActivity extends ListActivity {
 			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
+		case R.id.action_send:
+			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
 
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		super.onListItemClick(l, v, position, id);
+		if (l.getCheckedItemCount() > 0) {
+			mSendMenuItem.setVisible(true);
+		}
+		mSendMenuItem.setVisible(false);
+	}
+	
 }
