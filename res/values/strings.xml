@@ -29,6 +29,7 @@
     <string name="error_message">Sorry</string>
     <string name="menu_camera_label">Camera</string>
     <string name="error_external_storage">problem accessing your device external storage</string>
+    <string name="general_error">Sorry, an error happened</string>
     <string-array name="camera_choices">
         <item >Take Picture</item>
         <item >Take Video</item>

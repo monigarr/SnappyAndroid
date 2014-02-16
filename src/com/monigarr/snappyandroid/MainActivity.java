@@ -190,6 +190,20 @@ public class MainActivity extends FragmentActivity implements
 		}
 	}
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		
+		if (resultCode == RESULT_OK) {
+			// add to gallery
+			Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+			mediaScanIntent.setData(mMediaUri);
+			sendBroadcast(mediaScanIntent);
+		} else if (resultCode != RESULT_CANCELED) {
+			Toast.makeText(this, R.string.general_error, Toast.LENGTH_LONG).show();
+		} 
+	}
+	
 	private void navigateToLogin() {
 		Intent intent = new Intent(this, LoginActivity.class);
 		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

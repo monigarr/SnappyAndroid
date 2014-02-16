@@ -63,6 +63,7 @@ public final class R {
         public static final int error_external_storage=0x7f05001b;
         public static final int error_message=0x7f050019;
         public static final int error_title=0x7f050018;
+        public static final int general_error=0x7f05001c;
         public static final int hello_world=0x7f050005;
         public static final int login_button_label=0x7f050009;
         public static final int login_error_message=0x7f050011;
