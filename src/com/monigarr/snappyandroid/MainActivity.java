@@ -67,14 +67,20 @@ public class MainActivity extends FragmentActivity implements
 							.show();
 				} else {
 					videoIntent.putExtra(MediaStore.EXTRA_OUTPUT, mMediaUri);
+					// 10 seconds
 					videoIntent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 10);
+					// 0 lowest quality
 					videoIntent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 0);
 					startActivityForResult(videoIntent, TAKE_VIDEO_REQUEST);
 				}
 				break;
 			case 2: // choose pic
+				Intent choosePhotoIntent = new Intent(Intent.ACTION_GET_CONTENT);
+				choosePhotoIntent.setType("image/*");
+				startActivityForResult(choosePhotoIntent, PICK_PHOTO_REQUEST);
 				break;
 			case 3: // choose vid
+
 				break;
 			}
 
@@ -95,19 +101,20 @@ public class MainActivity extends FragmentActivity implements
 						appName);
 
 				// 2. create subdirectory
-				if (! mediaStorageDir.exists()) {
-					if (! mediaStorageDir.mkdirs()) {
+				if (!mediaStorageDir.exists()) {
+					if (!mediaStorageDir.mkdirs()) {
 						Log.e(TAG, "failed to create directory");
 						return null;
 					}
 				}
-				
+
 				// 3. create file name
 				// 4. create file
 				File mediaFile;
 				Date now = new Date();
-				String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(now);
-				
+				String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss",
+						Locale.US).format(now);
+
 				String path = mediaStorageDir.getPath() + File.separator;
 				if (mediaType == MEDIA_TYPE_IMAGE) {
 					mediaFile = new File(path + "IMG_" + timestamp + ".jpg");
@@ -116,7 +123,7 @@ public class MainActivity extends FragmentActivity implements
 				} else {
 					return null;
 				}
-				
+
 				Log.d(TAG, "File: " + Uri.fromFile(mediaFile));
 				// 5. return file's URI
 				return Uri.fromFile(mediaFile);
@@ -205,17 +212,28 @@ public class MainActivity extends FragmentActivity implements
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
-		
+
 		if (resultCode == RESULT_OK) {
-			// add to gallery
-			Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+			if (requestCode == PICK_PHOTO_REQUEST
+					|| requestCode == PICK_VIDEO_REQUEST) {
+				if (data == null) {
+					Toast.makeText(this, getString(R.string.general_error),
+							Toast.LENGTH_LONG).show();
+				} else {
+					mMediaUri = data.getData();
+				}
+			} else {
+			Intent mediaScanIntent = new Intent(
+					Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
 			mediaScanIntent.setData(mMediaUri);
 			sendBroadcast(mediaScanIntent);
+			}
 		} else if (resultCode != RESULT_CANCELED) {
-			Toast.makeText(this, R.string.general_error, Toast.LENGTH_LONG).show();
-		} 
+			Toast.makeText(this, R.string.general_error, Toast.LENGTH_LONG)
+					.show();
+		}
 	}
-	
+
 	private void navigateToLogin() {
 		Intent intent = new Intent(this, LoginActivity.class);
 		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
