@@ -45,14 +45,16 @@ public final class R {
         public static final int activity_edit_friends=0x7f030000;
         public static final int activity_login=0x7f030001;
         public static final int activity_main=0x7f030002;
-        public static final int activity_sign_up=0x7f030003;
-        public static final int fragment_friends=0x7f030004;
-        public static final int fragment_inbox=0x7f030005;
+        public static final int activity_recipients=0x7f030003;
+        public static final int activity_sign_up=0x7f030004;
+        public static final int fragment_friends=0x7f030005;
+        public static final int fragment_inbox=0x7f030006;
     }
     public static final class menu {
         public static final int login=0x7f080000;
         public static final int main=0x7f080001;
-        public static final int sign_up=0x7f080002;
+        public static final int recipients=0x7f080002;
+        public static final int sign_up=0x7f080003;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -60,6 +62,7 @@ public final class R {
         public static final int email_hint=0x7f05000c;
         public static final int empty_friends_label=0x7f050015;
         public static final int empty_inbox_label=0x7f050014;
+        public static final int empty_recipients_list_message=0x7f050021;
         public static final int error_external_storage=0x7f05001b;
         public static final int error_file_size_too_large=0x7f05001f;
         public static final int error_message=0x7f050019;
@@ -81,6 +84,7 @@ public final class R {
         public static final int signup_error_title=0x7f050010;
         public static final int title_activity_edit_friends=0x7f050017;
         public static final int title_activity_login=0x7f050004;
+        public static final int title_activity_recipients=0x7f050020;
         public static final int title_activity_sign_up=0x7f05000b;
         public static final int title_activity_sing_up=0x7f050006;
         public static final int title_section1=0x7f050002;

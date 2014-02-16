@@ -30,14 +30,18 @@
     <string name="menu_camera_label">Camera</string>
     <string name="error_external_storage">problem accessing your device external storage</string>
     <string name="general_error">Sorry, an error happened</string>
+
     <string-array name="camera_choices">
-        <item >Take Picture</item>
-        <item >Take Video</item>
-        <item >Choose Picture</item>
-        <item >Choose Video</item>
+        <item>Take Picture</item>
+        <item>Take Video</item>
+        <item>Choose Picture</item>
+        <item>Choose Video</item>
     </string-array>
-        <string name="video_file_size_warning">Video must be less than 10 MB</string>
-        <string name="error_opening_file">problem with selected file</string>
-        <string name="error_file_size_too_large">Selected file is too large. Pick new file</string>
+
+    <string name="video_file_size_warning">Video must be less than 10 MB</string>
+    <string name="error_opening_file">problem with selected file</string>
+    <string name="error_file_size_too_large">Selected file is too large. Pick new file</string>
+    <string name="title_activity_recipients">Choose Recipients</string>
+    <string name="empty_recipients_list_message">Choose Friends First</string>
 
 </resources>
