@@ -27,5 +27,6 @@
     <string name="title_activity_edit_friends">Edit Friends</string>
     <string name="error_title">Sorry</string>
     <string name="error_message">Sorry...</string>
+    <string name="menu_camera_label">Camera</string>
 
 </resources>
