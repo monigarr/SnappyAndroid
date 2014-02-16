@@ -66,6 +66,9 @@ public final class R {
         public static final int error_file_size_too_large=0x7f05001f;
         public static final int error_message=0x7f050019;
         public static final int error_opening_file=0x7f05001e;
+        public static final int error_selecting_file=0x7f050023;
+        public static final int error_selecting_file_title=0x7f050024;
+        public static final int error_sending_message=0x7f050026;
         public static final int error_title=0x7f050018;
         public static final int general_error=0x7f05001c;
         public static final int hello_world=0x7f050005;
@@ -82,6 +85,7 @@ public final class R {
         public static final int signup_button_label=0x7f05000d;
         public static final int signup_error_message=0x7f05000f;
         public static final int signup_error_title=0x7f050010;
+        public static final int success_message=0x7f050025;
         public static final int title_activity_edit_friends=0x7f050017;
         public static final int title_activity_login=0x7f050004;
         public static final int title_activity_recipients=0x7f050020;

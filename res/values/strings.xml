@@ -44,5 +44,9 @@
     <string name="title_activity_recipients">Choose Recipients</string>
     <string name="empty_recipients_list_message">Choose Friends First</string>
     <string name="menu_send_label">Send</string>
+    <string name="error_selecting_file">Error with File. Pick another one</string>
+    <string name="error_selecting_file_title">Oops!</string>
+    <string name="success_message">Message Sent</string>
+    <string name="error_sending_message">Error Sending Message. Try again</string>
 
 </resources>
