@@ -8,6 +8,12 @@ Status
 Work in Progress. 
 Start Date: Feb. 15th 2014 2pm
 
+To Finish:
+* capture photo/video
+* send, receive, view messages
+* self destruct messages
+* final graphic design visuals
+
 Features
 ==========
 Let users send photo / video messages to other users. The messages will be deleted after they are viewed. Tab based navigation, list view (messages, friend screen). Parse.com cloud storage to handle accounts, file storage, and message storage. Use the same Parse.com db as I am using for my iOS version of this project.
