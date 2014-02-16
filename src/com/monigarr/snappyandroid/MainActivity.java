@@ -1,6 +1,9 @@
 package com.monigarr.snappyandroid;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -36,7 +39,10 @@ public class MainActivity extends FragmentActivity implements
 
 	public static final int MEDIA_TYPE_IMAGE = 4;
 	public static final int MEDIA_TYPE_VIDEO = 5;
-
+	
+	//10 MB limit
+	public static final int FILE_SIZE_LIMIT = 1024*1024*10;
+	
 	protected Uri mMediaUri;
 
 	protected DialogInterface.OnClickListener mDialogListener = new DialogInterface.OnClickListener() {
@@ -80,7 +86,10 @@ public class MainActivity extends FragmentActivity implements
 				startActivityForResult(choosePhotoIntent, PICK_PHOTO_REQUEST);
 				break;
 			case 3: // choose vid
-
+				Intent chooseVideoIntent = new Intent(Intent.ACTION_GET_CONTENT);
+				chooseVideoIntent.setType("video/*");
+				Toast.makeText(MainActivity.this, R.string.video_file_size_warning, Toast.LENGTH_LONG).show();
+				startActivityForResult(chooseVideoIntent, PICK_VIDEO_REQUEST);
 				break;
 			}
 
@@ -222,6 +231,41 @@ public class MainActivity extends FragmentActivity implements
 				} else {
 					mMediaUri = data.getData();
 				}
+				
+				if (requestCode == PICK_VIDEO_REQUEST) {
+					//check video to be less than 10 mb
+					int fileSize = 0;
+					InputStream inputStream = null;
+					
+					try {
+						inputStream = getContentResolver().openInputStream(mMediaUri);
+						fileSize = inputStream.available();
+					} catch (FileNotFoundException e) {
+						Toast.makeText(this, R.string.error_opening_file,
+								Toast.LENGTH_LONG).show();
+						return;
+					} catch (IOException e) {
+						Toast.makeText(this, R.string.error_opening_file,
+								Toast.LENGTH_LONG).show();
+						return;
+					}
+					finally {
+						//this always executes no matter what
+						try {
+							inputStream.close();
+						} catch (IOException e) {
+							//intentionally blank
+							//just being a good citizen and closing our stream
+						}
+					}
+					
+					if (fileSize >= FILE_SIZE_LIMIT) {
+						Toast.makeText(this, R.string.error_file_size_too_large, Toast.LENGTH_LONG).show();
+						return;
+					}
+				}
+				Log.i(TAG, "Media URI: " + mMediaUri);
+				
 			} else {
 			Intent mediaScanIntent = new Intent(
 					Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);

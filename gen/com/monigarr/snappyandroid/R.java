@@ -61,7 +61,9 @@ public final class R {
         public static final int empty_friends_label=0x7f050015;
         public static final int empty_inbox_label=0x7f050014;
         public static final int error_external_storage=0x7f05001b;
+        public static final int error_file_size_too_large=0x7f05001f;
         public static final int error_message=0x7f050019;
+        public static final int error_opening_file=0x7f05001e;
         public static final int error_title=0x7f050018;
         public static final int general_error=0x7f05001c;
         public static final int hello_world=0x7f050005;
@@ -84,6 +86,7 @@ public final class R {
         public static final int title_section1=0x7f050002;
         public static final int title_section2=0x7f050003;
         public static final int username_hint=0x7f050007;
+        public static final int video_file_size_warning=0x7f05001d;
     }
     public static final class style {
         /** 
