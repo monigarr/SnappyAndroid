@@ -48,5 +48,7 @@
     <string name="error_selecting_file_title">Oops!</string>
     <string name="success_message">Message Sent</string>
     <string name="error_sending_message">Error Sending Message. Try again</string>
+    <string name="title_activity_view_image">Snappy Android</string>
+    <string name="icon_type_description">icon to show file type</string>
 
 </resources>

@@ -76,7 +76,7 @@ public class InboxFragment extends ListFragment {
 			startActivity(intent);
 		}
 		else {
-			// view the video
+			// view video
 		}
 	}
 }
