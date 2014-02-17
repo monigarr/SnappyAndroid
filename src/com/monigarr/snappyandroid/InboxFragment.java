@@ -1,5 +1,6 @@
 package com.monigarr.snappyandroid;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Intent;
@@ -85,6 +86,25 @@ public class InboxFragment extends ListFragment {
 			Intent intent = new Intent(Intent.ACTION_VIEW, fileUri);
 			intent.setDataAndType(fileUri, "video/*");
 			startActivity(intent);
+		}
+		
+		// Delete Message
+		List<String> ids = message.getList(ParseConstants.KEY_RECIPIENT_IDS);
+		
+		if (ids.size() == 1) {
+			//last recipient can delete whole message now
+			message.deleteInBackground();
+		} else {
+			// remove recipient but save message for other recipients
+			ids.remove(ParseUser.getCurrentUser().getObjectId());
+						
+			ArrayList<String> idsToRemove = new ArrayList<String>();
+			idsToRemove.add(ParseUser.getCurrentUser().getObjectId());
+			message.removeAll(ParseConstants.KEY_RECIPIENT_IDS, idsToRemove);
+			message.saveInBackground();
+			//research how to do a complete file cleanup delete - its clunky but do it 
+			//maybe even manual button push on parse.com, in the dark, with a pencil! yuck
+			//because this is a most amazing mobile app!
 		}
 	}
 }
