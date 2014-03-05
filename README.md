@@ -13,6 +13,13 @@ Video Review
 =============
 http://www.youtube.com/watch?v=QxQbs4p4nb0&feature=share&list=UUYLig-tRX1yp7QvWfc2TjHw
 
+Install & Requirements
+========
+Import project into Eclipse as Android Project.
+Project > Clean
+Project > Build
+Project > Run on your device or emulator.
+
 Features
 ==========
 Let users send photo / video messages to other users. The messages will be deleted after they are viewed. Tab based navigation, list view (messages, friend screen). Parse.com cloud storage to handle accounts, file storage, and message storage. Use the same Parse.com db as I am using for my iOS version of this project.
