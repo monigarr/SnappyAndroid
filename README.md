@@ -14,7 +14,9 @@ Video Review
 http://www.youtube.com/watch?v=QxQbs4p4nb0&feature=share&list=UUYLig-tRX1yp7QvWfc2TjHw
 
 Install & Requirements
-========
+=======================
+Eclipse, Android SDK, Android Device or Emulator.
+
 Import project into Eclipse as Android Project.
 Project > Clean
 Project > Build
