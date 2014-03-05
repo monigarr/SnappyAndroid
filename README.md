@@ -1,6 +1,6 @@
 SnappyAndroid
 =============
-<img src="https://www.facebook.com/photo.php?fbid=10152220491926590&l=57b1ded90e" width="320px" height= "240px" alt="Snappy Android Mobile App Screenshot">
+<img src="http://i0.wp.com/www.monicalamb.com/blog3/wp-content/uploads/Galaxy.png?fit=640%2C9999" width="320px" height= "240px" alt="Snappy Android Mobile App Screenshot">
 
 Demo of Android snap chat clone project to show my Android development skills. 
 
