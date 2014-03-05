@@ -1,8 +1,8 @@
 SnappyAndroid
 =============
+<img src="https://www.facebook.com/photo.php?fbid=10152220491926590&l=57b1ded90e" width="320px" height= "240px" alt="Snappy Android Mobile App Screenshot">
 
-<img src="https://www.facebook.com/photo.php?fbid=10152220491926590&l=57b1ded90e" width="320px" height= "240px" alt="Snappy Android Mobile App Screenshot" align="left">Demo of Android snap chat clone project to show my Android development skills. 
-
+Demo of Android snap chat clone project to show my Android development skills. 
 
 Status
 =======
