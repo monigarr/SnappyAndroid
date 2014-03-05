@@ -2,7 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditFriendsActivity" >
+    tools:context=".EditFriendsActivity"
+    android:background="@color/light"
+    android:textColor="@color/darkest" >
 
     <ListView
         android:id="@android:id/list"

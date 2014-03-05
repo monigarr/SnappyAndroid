@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:background="@color/light"
+    android:textColor="@color/darkest" >
 
     <ImageView
         android:id="@+id/messageIcon"
@@ -22,6 +24,7 @@
         android:layout_centerVertical="true"
         android:layout_toRightOf="@+id/messageIcon"
         android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+    	android:textColor="@color/darkest" />
 
 </RelativeLayout>

@@ -7,12 +7,11 @@ Status
 =======
 Work in Progress. 
 Start Date: Feb. 15th 2014 2pm
+Completed: Feb. 17th 2014 4pm
 
-To Finish:
-* capture photo/video
-* send, receive, view messages
-* self destruct messages
-* final graphic design visuals
+Video Review
+=============
+http://www.youtube.com/watch?v=QxQbs4p4nb0&feature=share&list=UUYLig-tRX1yp7QvWfc2TjHw
 
 Features
 ==========

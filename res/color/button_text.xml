@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://www.colourlovers.com/palette/124973/Pink_Elephant -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+          android:color="#FD6E8A"/> <!-- pressed peony dark-->
+    <item android:state_focused="true"
+          android:color="#A2122F"/> <!-- focused cherry darker-->
+    <item android:color="#693726"/> <!-- default lorna darkest-->
+</selector>

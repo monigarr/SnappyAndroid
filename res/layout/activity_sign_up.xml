@@ -6,7 +6,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SignUpActivity" >
+    tools:context=".SignUpActivity"
+    android:background="@color/light"
+    android:textColor="@color/darkest" >
 
     <EditText
         android:id="@+id/usernameField"
@@ -46,7 +48,9 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/emailField"
         android:layout_below="@+id/emailField"
-        android:text="@string/signup_button_label" />
+        android:text="@string/signup_button_label"
+        android:background="@color/darkest"
+        android:textColor="@color/light" />
 
     <TextView
         android:id="@+id/loginText"
@@ -54,6 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:textSize="15sp"
         android:text="@string/login_text" />
 
 </RelativeLayout>

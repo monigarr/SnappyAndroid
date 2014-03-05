@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://www.colourlovers.com/palette/124973/Pink_Elephant -->
+<resources>
+   <color name="darkest">#693726</color><!-- lorna -->
+   <color name="darker">#A2122F</color><!-- cherry -->
+   <color name="dark">#FD6E8A</color><!-- peony -->
+   <color name="medium">#80B3FF</color><!-- derie -->
+   <color name="light">#FFC2CE</color><!-- blush pink -->
+</resources>
